@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tengesani</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_stock">Stock</string>
+    <string name="title_sales">Sales</string>
+    <string name="title_purchases">Purchases</string>
+    <string name="title_expenses">Expenses</string>
+    <string name="title_statements">Fin Statements</string>
+
+
+</resources>
