@@ -3,22 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_stock">
-
-<!--
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.tengesani.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
--->
+    app:startDestination="@+id/navigation_purchases">
 
     <fragment
-        android:id="@+id/navigation_stock"
-        android:name="com.tengesani.ui.stock.StockFragment"
-        android:label="@string/title_stock"
-        tools:layout="@layout/fragment_stock" />
-
+        android:id="@+id/navigation_purchases"
+        android:name="com.tengesani.ui.purchases.PurchasesFragment"
+        android:label="@string/title_purchases"
+        tools:layout="@layout/fragment_purchases" />
 
     <fragment
         android:id="@+id/navigation_sales"
@@ -26,24 +17,19 @@
         android:label="@string/title_sales"
         tools:layout="@layout/fragment_sales" />
 
-    <fragment
-        android:id="@+id/navigation_purchases"
-        android:name="com.tengesani.ui.purchases.PurchasesFragment"
-        android:label="@string/title_purchases"
-        tools:layout="@layout/fragment_stock" />
 
     <fragment
         android:id="@+id/navigation_expenses"
         android:name="com.tengesani.ui.expenses.ExpensesFragment"
         android:label="@string/title_expenses"
-        tools:layout="@layout/fragment_stock" />
+        tools:layout="@layout/fragment_expenses" />
 
 
     <fragment
         android:id="@+id/navigation_fin_statements"
         android:name="com.tengesani.ui.fin.statements.FInStatementsFragment"
         android:label="@string/title_statements"
-        tools:layout="@layout/fragment_stock" />
+        tools:layout="@layout/fragment_fin_statements" />
 
 
 </navigation>

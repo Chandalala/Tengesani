@@ -7,7 +7,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.room.Room
 import com.tengesani.databinding.ActivityMainBinding
+import com.tengesani.repository.AppDatabase
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +17,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "app_database"
+        ).build()
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -25,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
-            /*R.id.navigation_dashboard, */R.id.navigation_stock,  R.id.navigation_sales,
-            R.id.navigation_purchases,  R.id.navigation_expenses,  R.id.navigation_fin_statements))
+            /*R.id.navigation_dashboard, */R.id.navigation_purchases,  R.id.navigation_sales,
+            R.id.navigation_expenses,  R.id.navigation_fin_statements))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
