@@ -7,23 +7,18 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.room.Room
 import com.tengesani.databinding.ActivityMainBinding
-import com.tengesani.repository.AppDatabase
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java, "app_database"
-        ).build()
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+            binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView

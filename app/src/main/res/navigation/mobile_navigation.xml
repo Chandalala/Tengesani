@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/navigation_purchases"
-        android:name="com.tengesani.ui.purchases.PurchasesFragment"
+        android:name="com.tengesani.purchases.ui.PurchasesFragment"
         android:label="@string/title_purchases"
         tools:layout="@layout/fragment_purchases" />
 
     <fragment
         android:id="@+id/navigation_sales"
-        android:name="com.tengesani.ui.sales.SalesFragment"
+        android:name="com.tengesani.sales.ui.SalesFragment"
         android:label="@string/title_sales"
         tools:layout="@layout/fragment_sales" />
 
 
     <fragment
         android:id="@+id/navigation_expenses"
-        android:name="com.tengesani.ui.expenses.ExpensesFragment"
+        android:name="com.tengesani.repository.expenses.ui.ExpensesFragment"
         android:label="@string/title_expenses"
         tools:layout="@layout/fragment_expenses" />
 
 
     <fragment
         android:id="@+id/navigation_fin_statements"
-        android:name="com.tengesani.ui.fin.statements.FInStatementsFragment"
+        android:name="com.tengesani.repository.fin.statements.ui.FInStatementsFragment"
         android:label="@string/title_statements"
         tools:layout="@layout/fragment_fin_statements" />
 
