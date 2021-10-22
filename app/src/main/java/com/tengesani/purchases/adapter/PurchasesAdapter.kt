@@ -11,10 +11,12 @@ import com.tengesani.purchases.model.Purchase
 class PurchasesAdapter(private val purchases: List<Purchase>):
     RecyclerView.Adapter<PurchasesAdapter.ViewHolder>() {
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.purchase_item, parent, false)
+
+
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.purchase_item,parent,
+            false)
+
         return ViewHolder(view)
     }
 
@@ -23,13 +25,10 @@ class PurchasesAdapter(private val purchases: List<Purchase>):
 
 
     }
+
     override fun getItemCount(): Int {
         return purchases.size
     }
-
-  /*  override fun getItemViewType(position: Int): Int {
-        return
-    }*/
 
     class ViewHolder (view: View):RecyclerView.ViewHolder(view){
 
@@ -62,5 +61,9 @@ class PurchasesAdapter(private val purchases: List<Purchase>):
 
 
     }
+
+
+
+
 
 }

@@ -1,5 +1,6 @@
 package com.tengesani.purchases.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.tengesani.purchases.model.Purchase
 import kotlinx.coroutines.flow.Flow
@@ -8,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 interface PurchaseDao {
 
     @Query("SELECT * FROM purchase")
-    fun getAllPurchases(): Flow<List<Purchase>>
+    fun getAllPurchases(): LiveData<List<Purchase>>
 
     @Insert
     suspend fun recordPurchase(purchase: Purchase)

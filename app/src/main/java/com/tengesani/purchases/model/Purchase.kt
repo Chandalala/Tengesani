@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Purchase(
 
-    @PrimaryKey val sale_id: Int,
+    @PrimaryKey val purchase_id: Long,
     val product_name:String,
     val purchase_price:Double,
     val category:String,

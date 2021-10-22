@@ -17,7 +17,14 @@ class PurchasesViewModel (
     val text: LiveData<String> = _text
 
 
-    val purchases:LiveData<List<Purchase>>  = repository.getAllPurchases().asLiveData()
+    val purchases:LiveData<List<Purchase>>  = repository.getAllPurchases()
+
+     fun cancelPurchase(purchase: Purchase) {
+
+
+        repository.cancelPurchase(purchase)
+    }
+
 
 
 
