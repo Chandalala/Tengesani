@@ -16,6 +16,7 @@ class PurchasesViewModel (
     }
     val text: LiveData<String> = _text
 
+
     val purchases:LiveData<List<Purchase>>  = repository.getAllPurchases().asLiveData()
 
 

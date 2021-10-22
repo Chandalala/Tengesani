@@ -11,7 +11,7 @@ interface PurchaseDao {
     fun getAllPurchases(): Flow<List<Purchase>>
 
     @Insert
-    fun recordPurchase(purchase: Purchase)
+    suspend fun recordPurchase(purchase: Purchase)
 
     @Delete
     fun cancelPurchase(purchase: Purchase)

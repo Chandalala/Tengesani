@@ -10,8 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.tengesani.TengesaniApp
 import com.tengesani.databinding.FragmentPurchasesBinding
+import com.tengesani.purchases.adapter.PurchasesAdapter
 
 class PurchasesFragment : Fragment() {
 
@@ -43,9 +45,13 @@ class PurchasesFragment : Fragment() {
             textView.text = it
         })
 
- /*       purchasesViewModel.purchases.observe(viewLifecycleOwner, Observer {
+        val recyclerView: RecyclerView = binding.recyclerView
+
+        purchasesViewModel.purchases.observe(viewLifecycleOwner, Observer {
           //  textView.text = it.get(0).category
-        })*/
+            recyclerView.adapter = PurchasesAdapter(it)
+
+        })
 
 
 
