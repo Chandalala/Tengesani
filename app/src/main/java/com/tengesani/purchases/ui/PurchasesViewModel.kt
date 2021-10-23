@@ -17,12 +17,18 @@ class PurchasesViewModel (
     val text: LiveData<String> = _text
 
 
-    val purchases:LiveData<List<Purchase>>  = repository.getAllPurchases()
+    val purchases:LiveData<MutableList<Purchase>>  = repository.getAllPurchases()
 
      fun cancelPurchase(purchase: Purchase) {
 
 
         repository.cancelPurchase(purchase)
+    }
+
+    fun recordPurchase() {
+
+
+        repository.recordPurchases()
     }
 
 

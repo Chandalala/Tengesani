@@ -1,57 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
-    android:layout_width="match_parent"
+<LinearLayout
+    android:orientation="horizontal"
     android:layout_height="wrap_content"
-    android:layout_marginTop="1dp"
-    android:layout_marginEnd="10dp"
+    android:layout_width="match_parent"
+    android:padding="5dp"
     android:layout_marginStart="10dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+    android:layout_marginEnd="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TableRow
-        android:padding="5dp"
-        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Sugar 500g"
+        android:id="@+id/product"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="$13.00"
+        android:id="@+id/price"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sugar 500g"
-            android:id="@+id/product"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="$13.00"
-            android:id="@+id/price"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="10"
+        android:id="@+id/qty"
 
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="10"
-            android:id="@+id/qty"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Food"
+        android:id="@+id/category"
 
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Food"
-            android:id="@+id/category"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="13-04-1992"
+        android:id="@+id/date"
 
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="13-04-1992"
-            android:id="@+id/date"
+        />
 
-            />
-
-    </TableRow>
-
-</TableLayout>
+</LinearLayout>

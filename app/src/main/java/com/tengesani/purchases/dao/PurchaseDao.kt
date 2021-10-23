@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 interface PurchaseDao {
 
     @Query("SELECT * FROM purchase")
-    fun getAllPurchases(): LiveData<List<Purchase>>
+    fun getAllPurchases(): LiveData<MutableList<Purchase>>
 
     @Insert
     suspend fun recordPurchase(purchase: Purchase)

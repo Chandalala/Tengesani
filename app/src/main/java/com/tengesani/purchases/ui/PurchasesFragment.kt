@@ -1,18 +1,17 @@
 package com.tengesani.purchases.ui
 
-import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.tengesani.SwipeToDeleteCallback
+import com.tengesani.SwipeToEditCallback
 import com.tengesani.TengesaniApp
 import com.tengesani.databinding.FragmentPurchasesBinding
 import com.tengesani.purchases.adapter.PurchasesAdapter
@@ -44,6 +43,8 @@ class PurchasesFragment : Fragment() {
 
         val recyclerView: RecyclerView = binding.recyclerView
 
+       // purchasesViewModel.recordPurchase()
+
 
 
         purchasesViewModel.purchases.observe(viewLifecycleOwner, Observer {
@@ -55,7 +56,7 @@ class PurchasesFragment : Fragment() {
                     val pos = viewHolder.adapterPosition
                     purchasesViewModel.cancelPurchase(it[pos])
 
-                    it.toMutableList().removeAt(pos)
+                    it.removeAt(pos)
                     PurchasesAdapter(it).notifyItemRemoved(pos)
 
                 }
@@ -63,6 +64,22 @@ class PurchasesFragment : Fragment() {
 
             val itemTouchHelper = ItemTouchHelper(swipeToDeleteCallback)
             itemTouchHelper.attachToRecyclerView(recyclerView)
+
+
+
+            val swipeToEditCallback = object : SwipeToEditCallback() {
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                    val pos = viewHolder.adapterPosition
+
+
+                    Toast.makeText(activity, it[pos].product_name, Toast.LENGTH_SHORT).show()
+                    PurchasesAdapter(it).notifyItemRemoved(pos)
+
+                }
+            }
+
+            val itemTouchHelper2 = ItemTouchHelper(swipeToEditCallback)
+            itemTouchHelper2.attachToRecyclerView(recyclerView)
 
         })
 

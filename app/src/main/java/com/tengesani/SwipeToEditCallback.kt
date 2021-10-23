@@ -5,10 +5,10 @@ import android.graphics.Canvas
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class SwipeToDeleteCallback() : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
+abstract class SwipeToEditCallback() : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
 
     override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder): Int {
-        val swipeFlag = ItemTouchHelper.RIGHT
+        val swipeFlag = ItemTouchHelper.LEFT
         return makeMovementFlags(0, swipeFlag)
     }
 
