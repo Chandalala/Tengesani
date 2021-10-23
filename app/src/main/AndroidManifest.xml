@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tengesani">
         <activity
+            android:name=".purchases.ui.AddPurchaseActivity"
+            android:exported="true"
+            android:label="@string/title_activity_add_purchase"
+            android:theme="@style/Theme.Tengesani" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">

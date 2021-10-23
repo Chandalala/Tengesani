@@ -6,6 +6,7 @@
     <string name="title_purchases">Purchases</string>
     <string name="title_expenses">Expenses</string>
     <string name="title_statements">Fin Statements</string>
+    <string name="title_activity_add_purchase">Purchase Details</string>
 
 
 </resources>

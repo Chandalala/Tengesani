@@ -1,4 +1,4 @@
-package com.tengesani.repository.fin.statements.ui
+package com.tengesani.fin.statements.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.tengesani.databinding.FragmentFinStatementsBinding
+import com.tengesani.repository.fin.statements.ui.FinStatementsViewModel
 
 class FInStatementsFragment : Fragment() {
 

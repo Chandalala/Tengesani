@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/navigation_fin_statements"
-        android:name="com.tengesani.repository.fin.statements.ui.FInStatementsFragment"
+        android:name="com.tengesani.fin.statements.ui.FInStatementsFragment"
         android:label="@string/title_statements"
         tools:layout="@layout/fragment_fin_statements" />
 
