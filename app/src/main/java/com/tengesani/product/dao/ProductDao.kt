@@ -2,8 +2,7 @@ package com.tengesani.product.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.tengesani.category.model.Product
-import kotlinx.coroutines.flow.Flow
+import com.tengesani.product.model.Product
 
 @Dao
 interface ProductDao {

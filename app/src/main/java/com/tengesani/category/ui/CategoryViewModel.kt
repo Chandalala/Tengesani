@@ -13,13 +13,11 @@ class CategoryViewModel (
 
     val categories:LiveData<MutableList<Category>>  = repository.getAllCategories()
 
-     fun removeProduct(Category: Category) {
-
-
+     fun removeCategory(Category: Category) {
         repository.removeCategory(Category)
     }
 
-    fun recordProduct(Category: Category) {
+    fun recordCategory(Category: Category) {
 
 
         repository.recordCategory(Category)

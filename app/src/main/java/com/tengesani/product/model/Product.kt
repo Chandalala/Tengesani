@@ -1,4 +1,4 @@
-package com.tengesani.category.model
+package com.tengesani.product.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity
 class Product (
-    @PrimaryKey val product_id: Int,
     val product_name:String,
     val category:String,
     val date_created: String
    ){
+    @PrimaryKey(autoGenerate = true) var productId: Int=0
 }

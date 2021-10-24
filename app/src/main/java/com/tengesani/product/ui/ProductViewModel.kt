@@ -1,11 +1,8 @@
 package com.tengesani.product.ui
 
-import android.app.Application
 import androidx.lifecycle.*
-import com.tengesani.category.model.Product
+import com.tengesani.product.model.Product
 import com.tengesani.product.repository.ProductRepository
-import com.tengesani.purchases.model.Purchase
-import com.tengesani.purchases.repository.PurchasesRepository
 
 class ProductViewModel (
     var repository: ProductRepository,

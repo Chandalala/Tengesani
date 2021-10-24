@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.31927083333333334" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/layout/activity_add_category.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.31927083333333334" />
         <entry key="app/src/main/res/layout/activity_add_purchase.xml" value="0.31927083333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.31927083333333334" />
@@ -24,6 +27,7 @@
         <entry key="app/src/main/res/layout/purchase_layout.xml" value="0.31927083333333334" />
         <entry key="app/src/main/res/layout/purchase_layout_header.xml" value="0.31927083333333334" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/menu/options_menu.xml" value="0.31927083333333334" />
       </map>
     </option>
   </component>

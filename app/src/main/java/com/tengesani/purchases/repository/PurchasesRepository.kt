@@ -16,28 +16,6 @@ class PurchasesRepository (var purchaseDao: PurchaseDao){
 
 
      fun getAllPurchases(): LiveData<MutableList<Purchase>> {
-/*         var i=0
-         while (i<100){
-
-             fun main() = runBlocking { // this: CoroutineScope
-                 launch { // launch a new coroutine and continue
-                     delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
-                   // print after delay
-                     purchaseDao.recordPurchase(
-                         Purchase(i.toLong(), "Product $i",3.20+i,
-                             "CT $i",8+i,"18-04-92")
-                     )
-                 }
-
-             }
-
-             main()
-
-
-
-             i++
-         }*/
-
 
         return purchaseDao.getAllPurchases()
     }
@@ -55,29 +33,18 @@ class PurchasesRepository (var purchaseDao: PurchaseDao){
 
      }
 
-    fun recordPurchases(){
-         var i=0
-         while (i<100){
+    fun recordPurchase(purchase: Purchase){
 
-             fun main() = runBlocking { // this: CoroutineScope
-                 launch { // launch a new coroutine and continue
-                     delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
-                   // print after delay
-                     purchaseDao.recordPurchase(
-                         Purchase(i.toLong(), "Product $i",3.20+i,
-                             "CT $i",8+i,"18-04-92")
-                     )
-                 }
+        fun main() = runBlocking { // this: CoroutineScope
+            launch { // launch a new coroutine and continue
+                delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
+                // print after delay
+                purchaseDao.recordPurchase(purchase)
+            }
 
-             }
+        }
 
-             main()
-
-
-
-             i++
-         }
-
+        main()
 
     }
 

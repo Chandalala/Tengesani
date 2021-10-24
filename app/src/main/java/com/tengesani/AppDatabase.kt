@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.tengesani.category.model.Category
 import com.tengesani.category.dao.CategoryDao
-import com.tengesani.category.model.Product
+import com.tengesani.product.model.Product
 import com.tengesani.product.dao.ProductDao
 import com.tengesani.expenses.model.Expense
 import com.tengesani.repository.expenses.dao.ExpenseDao
@@ -18,7 +18,7 @@ import com.tengesani.sales.model.Sale
 import com.tengesani.sales.dao.SaleDao
 
 @Database(entities = [Purchase::class, Sale::class, Expense::class, FinStatement::class,
-    Category::class, Product::class], version = 3)
+    Category::class, Product::class], version = 7)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun purchaseDao(): PurchaseDao
     abstract fun saleDao(): SaleDao

@@ -1,11 +1,9 @@
 package com.tengesani.category.repository
 
 
-import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.LiveData
 import com.tengesani.category.dao.CategoryDao
 import com.tengesani.category.model.Category
-import com.tengesani.category.model.Product
 
 import java.util.concurrent.Executors
 

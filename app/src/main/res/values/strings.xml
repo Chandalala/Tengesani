@@ -7,6 +7,9 @@
     <string name="title_expenses">Expenses</string>
     <string name="title_statements">Fin Statements</string>
     <string name="title_activity_add_purchase">Purchase Details</string>
+    <string name="product_configuration">Product Configuration</string>
+    <string name="product_category_configuration">Product Category Configuration</string>
+    <string name="save">Save</string>
 
 
 </resources>

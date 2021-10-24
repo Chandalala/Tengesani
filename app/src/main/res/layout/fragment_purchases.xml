@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Product"
+                android:layout_margin="4dp"
                 android:id="@+id/product"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -41,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Price"
+                android:layout_margin="4dp"
                 android:id="@+id/price"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -52,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Quantity"
+                android:layout_margin="4dp"
                 android:id="@+id/qty"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -63,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Category"
+                android:layout_margin="4dp"
                 android:id="@+id/category"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -75,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Date"
+                android:layout_margin="4dp"
                 android:id="@+id/date"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -167,7 +172,6 @@
             android:src="@drawable/ic_outline_edit" />
 
     </com.github.clans.fab.FloatingActionMenu>
-
 
 
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/category_configuration"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/product_category_configuration" />
+
+    <item
+        android:id="@+id/product_configuration"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/product_configuration" />
+
+
+
+</menu>

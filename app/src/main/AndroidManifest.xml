@@ -11,7 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tengesani">
         <activity
+            android:name=".category.ui.AddCategoryActivity"
+            android:parentActivityName="com.tengesani.MainActivity"
+            android:label="Add Category"
+            android:exported="true" />
+        <activity
+            android:name=".product.ui.AddProductActivity"
+            android:parentActivityName="com.tengesani.MainActivity"
+            android:label="Add Product"
+            android:exported="true" />
+        <activity
             android:name=".purchases.ui.AddPurchaseActivity"
+            android:parentActivityName="com.tengesani.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_add_purchase"
             android:theme="@style/Theme.Tengesani" />

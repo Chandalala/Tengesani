@@ -13,6 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Sugar 500g"
+        android:maxLines="1"
+        android:layout_margin="4dp"
+        android:singleLine="true"
         android:id="@+id/product"
         />
     <TextView
@@ -20,6 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="$13.00"
+        android:layout_margin="4dp"
+        android:maxLines="1"
+        android:singleLine="true"
         android:id="@+id/price"
 
         />
@@ -28,6 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="10"
+        android:layout_margin="4dp"
+        android:maxLines="1"
+        android:singleLine="true"
         android:id="@+id/qty"
 
         />
@@ -36,6 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Food"
+        android:layout_margin="4dp"
+        android:maxLines="1"
+        android:singleLine="true"
         android:id="@+id/category"
 
         />
@@ -44,6 +56,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="13-04-1992"
+        android:layout_margin="4dp"
+        android:maxLines="1"
+        android:singleLine="true"
         android:id="@+id/date"
 
         />

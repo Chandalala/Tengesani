@@ -25,10 +25,10 @@ class PurchasesViewModel (
         repository.cancelPurchase(purchase)
     }
 
-    fun recordPurchase() {
+    fun recordPurchase(purchase: Purchase) {
 
 
-        repository.recordPurchases()
+        repository.recordPurchase(purchase)
     }
 
 

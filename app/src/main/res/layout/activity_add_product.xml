@@ -33,22 +33,21 @@
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/productSpinnerLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/textInputLayoutProduct"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/product">
 
-        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-            android:id="@+id/productTextView"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/outlined_edit_textProduct"
+            android:inputType="textCapSentences"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            tools:ignore="KeyboardInaccessibleWidget" />
+            android:layout_height="wrap_content" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -61,7 +60,7 @@
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productSpinnerLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutProduct" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/categorySpinnerLayout"
@@ -83,72 +82,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Price"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPrice"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayoutPrice"
-        app:layout_constraintTop_toBottomOf="@+id/categorySpinnerLayout"
-        />
-
-    <TextView
-        android:id="@+id/quantity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Quantity"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/categorySpinnerLayout"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutQTY"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayoutQTY" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutPrice"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textInputLayoutQTY"
-        app:layout_constraintTop_toBottomOf="@+id/price">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/outlined_edit_textPrice"
-            android:inputType="numberDecimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutQTY"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:layout_constraintLeft_toRightOf="@+id/textInputLayoutPrice"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quantity">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/outlined_edit_textQTY"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.button.MaterialButton
