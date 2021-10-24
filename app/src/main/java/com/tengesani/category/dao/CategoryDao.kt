@@ -1,9 +1,8 @@
-package com.tengesani.dao
+package com.tengesani.category.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.tengesani.model.Category
-import kotlinx.coroutines.flow.Flow
+import com.tengesani.category.model.Category
 
 @Dao
 interface CategoryDao {
@@ -15,7 +14,7 @@ interface CategoryDao {
     fun recordCategory(category: Category)
 
     @Delete
-    fun cancelCategory(category: Category)
+    fun removeCategory(category: Category)
 
 
     @Update

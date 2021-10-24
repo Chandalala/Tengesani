@@ -1,4 +1,4 @@
-package com.tengesani.model
+package com.tengesani.category.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

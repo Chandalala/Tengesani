@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.tengesani.model.Category
-import com.tengesani.dao.CategoryDao
-import com.tengesani.model.Product
-import com.tengesani.dao.ProductDao
+import com.tengesani.category.model.Category
+import com.tengesani.category.dao.CategoryDao
+import com.tengesani.category.model.Product
+import com.tengesani.product.dao.ProductDao
 import com.tengesani.expenses.model.Expense
 import com.tengesani.repository.expenses.dao.ExpenseDao
 import com.tengesani.repository.fin.statements.dao.FinStatementDao

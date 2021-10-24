@@ -1,20 +1,21 @@
-package com.tengesani.dao
+package com.tengesani.product.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.tengesani.model.Product
+import com.tengesani.category.model.Product
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ProductDao {
 
     @Query("SELECT * FROM product")
-    fun getAllProducts(): Flow<List<Product>>
+    fun getAllProducts(): LiveData<MutableList<Product>>
 
     @Insert
     fun recordProduct(product: Product)
 
     @Delete
-    fun cancelProduct(product: Product)
+    fun removeProduct(product: Product)
 
 
     @Update
