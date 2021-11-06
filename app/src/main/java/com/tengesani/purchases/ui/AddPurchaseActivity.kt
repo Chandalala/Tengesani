@@ -1,5 +1,6 @@
 package com.tengesani.purchases.ui
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,6 +31,11 @@ import com.tengesani.product.ui.ProductViewModel
 import com.tengesani.product.ui.ProductViewModelFactory
 import com.tengesani.purchases.adapter.PurchasesAdapter
 import com.tengesani.purchases.model.Purchase
+import dmax.dialog.SpotsDialog
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 import java.time.LocalDate
 
 private lateinit var binding: ActivityAddPurchaseBinding
@@ -105,7 +111,18 @@ class AddPurchaseActivity : AppCompatActivity() {
 
 
 
+        val dialog: AlertDialog = SpotsDialog.Builder()
+            .setContext(this)
+            .setMessage("Saving Your Purchase Order")
+            .setCancelable(false)
+            .build()
+
+
+
         btnSave.setOnClickListener {
+
+            dialog.show()
+
 
 
             val purchase = Purchase(
@@ -117,6 +134,27 @@ class AddPurchaseActivity : AppCompatActivity() {
             )
 
             purchasesViewModel.recordPurchase(purchase)
+
+            purchasesViewModel.pr.observe(this,{
+
+                if (it.product_name != ""){
+
+                    println(it.product_name)
+             /*       dialog.dismiss()
+                    finish()*/
+
+
+
+
+                }
+                else{
+                    dialog.dismiss()
+
+                    println("Not Saved")
+
+                }
+            })
+
 
         }
 

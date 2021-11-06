@@ -13,6 +13,9 @@ interface CategoryDao {
     @Insert
     fun recordCategory(category: Category)
 
+/*    @Query("SELECT * FROM category where category_name = category_name")
+    fun getCategory(category_name: String): LiveData<Category>*/
+
     @Delete
     fun removeCategory(category: Category)
 

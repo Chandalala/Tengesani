@@ -56,7 +56,7 @@ class PurchasesFragment : Fragment(), View.OnClickListener {
 
 
 
-        purchasesViewModel.purchases.observe(viewLifecycleOwner, {
+        purchasesViewModel.getAllPurchases()?.observe(viewLifecycleOwner, {
           //  textView.text = it.get(0).category
             recyclerView.adapter = PurchasesAdapter(it)
 

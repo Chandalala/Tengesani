@@ -30,7 +30,7 @@ class CategoryRepository (var categoryDao: CategoryDao){
 
      }
 
-    fun recordCategory(category: Category){
+    fun recordCategory(category: Category):Category{
 
         Executors.newSingleThreadExecutor().execute {
 
@@ -40,6 +40,7 @@ class CategoryRepository (var categoryDao: CategoryDao){
         }
 
 
+        return category;
     }
 
     fun updateCategory(category: Category){

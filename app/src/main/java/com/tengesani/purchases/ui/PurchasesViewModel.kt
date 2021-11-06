@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.*
 import com.tengesani.purchases.model.Purchase
 import com.tengesani.purchases.repository.PurchasesRepository
+import kotlinx.coroutines.*
 
 class PurchasesViewModel (
     var repository: PurchasesRepository,
@@ -11,24 +12,56 @@ class PurchasesViewModel (
 
 
 
-    private val _text = MutableLiveData<String>().apply {
+    private var _text = MutableLiveData<String>().apply {
         value = "This is purchases Fragment"
     }
     val text: LiveData<String> = _text
 
+    private val scope = CoroutineScope(Job() + Dispatchers.IO)
 
-    val purchases:LiveData<MutableList<Purchase>>  = repository.getAllPurchases()
+
+     fun getAllPurchases() : LiveData<MutableList<Purchase>>? {
+
+        return repository.getAllPurchases()
+    }
 
      fun cancelPurchase(purchase: Purchase) {
 
+         println("cancelling1")
 
-        repository.cancelPurchase(purchase)
+
+
+         scope.launch {
+             println("cancelling 2")
+
+             repository.cancelPurchase(purchase)
+
+         }
+
+
     }
+
+
+
+    val pr = MutableLiveData<Purchase>()
+
 
     fun recordPurchase(purchase: Purchase) {
 
 
-        repository.recordPurchase(purchase)
+
+         scope.launch {
+
+
+             pr.postValue(repository.recordPurchase(purchase))
+
+
+         }
+
+
+
+
+
     }
 
 

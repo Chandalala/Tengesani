@@ -20,31 +20,21 @@ class PurchasesRepository (var purchaseDao: PurchaseDao){
         return purchaseDao.getAllPurchases()
     }
 
-     fun cancelPurchase(purchase: Purchase) {
+    suspend  fun cancelPurchase(purchase: Purchase) {
+        println("cancelling")
 
-         Executors.newSingleThreadExecutor().execute {
-
-
-             purchaseDao.cancelPurchase(purchase)
-
-         }
+        purchaseDao.cancelPurchase(purchase)
 
 
 
-     }
+    }
 
-    fun recordPurchase(purchase: Purchase){
+    suspend fun recordPurchase(purchase: Purchase): Purchase{
 
-        fun main() = runBlocking { // this: CoroutineScope
-            launch { // launch a new coroutine and continue
-                delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
-                // print after delay
-                purchaseDao.recordPurchase(purchase)
-            }
 
-        }
+        return purchaseDao.recordPurchase(purchase)
 
-        main()
+
 
     }
 

@@ -1,5 +1,6 @@
 package com.tengesani.category.ui
 
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,6 +14,7 @@ import com.tengesani.category.model.Category
 import com.tengesani.databinding.ActivityAddCategoryBinding
 import com.tengesani.databinding.ActivityMainBinding
 import com.tengesani.databinding.FragmentPurchasesBinding
+import dmax.dialog.SpotsDialog
 import java.time.LocalDate
 
 private lateinit var binding: ActivityAddCategoryBinding
@@ -54,6 +56,10 @@ class AddCategoryActivity : AppCompatActivity() {
                     textInputLayoutCategory.editText?.text.toString(),
                     LocalDate.now().toString()
                 )
+                val dialog: AlertDialog = SpotsDialog.Builder().setContext(application).build()
+
+                dialog.show()
+
                 categoryViewModel.recordCategory(category)
                 //Todo show saving dialog and finish activity
             }
