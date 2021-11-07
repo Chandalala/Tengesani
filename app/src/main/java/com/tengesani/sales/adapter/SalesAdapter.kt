@@ -1,4 +1,4 @@
-package com.tengesani.purchases.adapter
+package com.tengesani.sales.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,11 +8,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.tengesani.R
-import com.tengesani.purchases.model.Purchase
+import com.tengesani.sales.model.Sale
 import java.text.DecimalFormat
 
-class PurchasesAdapter(private val purchases: List<Purchase>, private val context:Context):
-    RecyclerView.Adapter<PurchasesAdapter.ViewHolder>() {
+class SalesAdapter(private val sales: List<Sale>, private val context:Context):
+    RecyclerView.Adapter<SalesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -24,13 +24,13 @@ class PurchasesAdapter(private val purchases: List<Purchase>, private val contex
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(purchases[position], context)
+        holder.bind(sales[position], context)
 
 
     }
 
     override fun getItemCount(): Int {
-        return purchases.size
+        return sales.size
     }
 
     class ViewHolder (view: View):RecyclerView.ViewHolder(view){
@@ -41,30 +41,27 @@ class PurchasesAdapter(private val purchases: List<Purchase>, private val contex
         private val categoryTextView: TextView = view.findViewById(R.id.category)
         private val dateTextView: TextView = view.findViewById(R.id.date)
 
-        private val purchaseItem: LinearLayout = view.findViewById(R.id.purchaseSaleItem)
+        private val saleItem: LinearLayout = view.findViewById(R.id.purchaseSaleItem)
 
 
-        private var currentPurchase: Purchase? = null
-
-
-
+        private var currentSale: Sale? = null
 
 
 
 
-        fun bind(purchase: Purchase, context: Context) {
+        fun bind(sale: Sale, context: Context) {
 
             val dec = DecimalFormat("#,###.##")
 
-            currentPurchase = purchase
+            currentSale = sale
 
-            productTextView.text = purchase.product_name
-            priceTextView.text =  dec.format(purchase.purchase_price).toString()
-            qtyTextView.text = dec.format(purchase.quantity).toString()
-            categoryTextView.text = purchase.category
-            dateTextView.text = purchase.purchase_date
+            productTextView.text = sale.product_name
+            priceTextView.text =  dec.format(sale.sale_price).toString()
+            qtyTextView.text = dec.format(sale.quantity_sold).toString()
+            categoryTextView.text = sale.category
+            dateTextView.text = sale.sale_date
 
-            purchaseItem.setOnClickListener {
+            saleItem.setOnClickListener {
                 
 
 

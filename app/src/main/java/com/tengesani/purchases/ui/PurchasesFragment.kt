@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.github.clans.fab.FloatingActionButton
 import com.tengesani.SwipeToDeleteCallback
-import com.tengesani.SwipeToEditCallback
 import com.tengesani.TengesaniApp
 import com.tengesani.databinding.FragmentPurchasesBinding
 import com.tengesani.purchases.adapter.PurchasesAdapter
@@ -58,7 +57,7 @@ class PurchasesFragment : Fragment(), View.OnClickListener {
 
         purchasesViewModel.getAllPurchases()?.observe(viewLifecycleOwner, {
           //  textView.text = it.get(0).category
-            recyclerView.adapter = PurchasesAdapter(it)
+            recyclerView.adapter = PurchasesAdapter(it, requireContext())
 
             val swipeToDeleteCallback = object : SwipeToDeleteCallback() {
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
@@ -66,7 +65,7 @@ class PurchasesFragment : Fragment(), View.OnClickListener {
                     purchasesViewModel.cancelPurchase(it[pos])
 
                     it.removeAt(pos)
-                    PurchasesAdapter(it).notifyItemRemoved(pos)
+                    PurchasesAdapter(it, requireContext()).notifyItemRemoved(pos)
 
                 }
             }
@@ -74,21 +73,6 @@ class PurchasesFragment : Fragment(), View.OnClickListener {
             val itemTouchHelper = ItemTouchHelper(swipeToDeleteCallback)
             itemTouchHelper.attachToRecyclerView(recyclerView)
 
-
-
-            val swipeToEditCallback = object : SwipeToEditCallback() {
-                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                    val pos = viewHolder.adapterPosition
-
-
-                    Toast.makeText(activity, it[pos].product_name, Toast.LENGTH_SHORT).show()
-                    PurchasesAdapter(it).notifyItemRemoved(pos)
-
-                }
-            }
-
-            val itemTouchHelper2 = ItemTouchHelper(swipeToEditCallback)
-            itemTouchHelper2.attachToRecyclerView(recyclerView)
 
         })
 

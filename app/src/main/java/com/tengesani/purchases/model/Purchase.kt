@@ -11,7 +11,7 @@ data class Purchase(
     val product_name:String,
     val purchase_price:Double,
     val category:String,
-    val quantity:Int,
+    var quantity:Int,
     val purchase_date: String
 
     ){

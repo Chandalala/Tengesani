@@ -18,7 +18,7 @@ import com.tengesani.sales.model.Sale
 import com.tengesani.sales.dao.SaleDao
 
 @Database(entities = [Purchase::class, Sale::class, Expense::class, FinStatement::class,
-    Category::class, Product::class], version = 7)
+    Category::class, Product::class], version = 8)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun purchaseDao(): PurchaseDao
     abstract fun saleDao(): SaleDao

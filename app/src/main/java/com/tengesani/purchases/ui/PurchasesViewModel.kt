@@ -65,6 +65,24 @@ class PurchasesViewModel (
     }
 
 
+    fun updatePurchase(purchase: Purchase){
+
+
+
+        scope.launch {
+
+            repository.updatePurchase(purchase)
+
+
+        }
+
+
+
+
+    }
+
+
+
 
 
 

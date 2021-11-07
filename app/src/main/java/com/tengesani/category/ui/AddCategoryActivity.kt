@@ -49,16 +49,21 @@ class AddCategoryActivity : AppCompatActivity() {
             CategoryViewModelFactory((applicationContext as TengesaniApp).categoryRepository)
         }
 
+        val dialog: AlertDialog = SpotsDialog.Builder()
+            .setContext(this)
+            .setMessage("Saving Category")
+            .setCancelable(false)
+            .build()
+
 
         btnSave.setOnClickListener {
+
+
             if (textInputLayoutCategory.editText?.text.toString() != ""){
                 val category = Category(
                     textInputLayoutCategory.editText?.text.toString(),
                     LocalDate.now().toString()
                 )
-                val dialog: AlertDialog = SpotsDialog.Builder().setContext(application).build()
-
-                dialog.show()
 
                 categoryViewModel.recordCategory(category)
                 //Todo show saving dialog and finish activity

@@ -39,5 +39,15 @@ class PurchasesRepository (var purchaseDao: PurchaseDao){
     }
 
 
+    suspend fun updatePurchase(purchase: Purchase){
+
+
+        purchaseDao.updatePurchase(purchase)
+
+
+
+    }
+
+
 
 }
