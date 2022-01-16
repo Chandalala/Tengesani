@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_purchases">
+    app:startDestination="@+id/navigation_dashboard">
 
     <fragment
         android:id="@+id/navigation_purchases"
@@ -17,10 +17,16 @@
         android:label="@string/title_sales"
         tools:layout="@layout/fragment_sales" />
 
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.tengesani.dashboard.ui.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
 
     <fragment
         android:id="@+id/navigation_expenses"
-        android:name="com.tengesani.repository.expenses.ui.ExpensesFragment"
+        android:name="com.tengesani.expenses.ui.ExpensesFragment"
         android:label="@string/title_expenses"
         tools:layout="@layout/fragment_expenses" />
 

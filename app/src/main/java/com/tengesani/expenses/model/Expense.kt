@@ -5,9 +5,14 @@ import androidx.room.PrimaryKey
 
 @Entity
 class Expense (
-    @PrimaryKey val expense_id: Int,
+
     val expense_name:String,
     val amount:Double,
     val date_incurred: String
-        ){
+
+    ){
+
+    @PrimaryKey(autoGenerate = true) var expenseId: Int=0
+
+
 }

@@ -2,6 +2,7 @@ package com.tengesani
 
 import android.app.Application
 import com.tengesani.category.repository.CategoryRepository
+import com.tengesani.expenses.repository.ExpensesRepository
 import com.tengesani.product.repository.ProductRepository
 import com.tengesani.purchases.repository.PurchasesRepository
 import com.tengesani.sales.repository.SalesRepository
@@ -12,6 +13,8 @@ class TengesaniApp : Application(){
     val salesRepository by lazy { SalesRepository(database.saleDao()) }
     val productRepository by lazy { ProductRepository(database.productDao()) }
     val categoryRepository by lazy { CategoryRepository(database.categoryDao()) }
+    val expenseRepository by lazy { ExpensesRepository(database.expenseDao()) }
+
 
 
 }

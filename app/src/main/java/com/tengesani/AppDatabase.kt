@@ -9,7 +9,7 @@ import com.tengesani.category.dao.CategoryDao
 import com.tengesani.product.model.Product
 import com.tengesani.product.dao.ProductDao
 import com.tengesani.expenses.model.Expense
-import com.tengesani.repository.expenses.dao.ExpenseDao
+import com.tengesani.expenses.dao.ExpenseDao
 import com.tengesani.repository.fin.statements.dao.FinStatementDao
 import com.tengesani.repository.fin.statements.model.FinStatement
 import com.tengesani.purchases.model.Purchase
@@ -18,7 +18,7 @@ import com.tengesani.sales.model.Sale
 import com.tengesani.sales.dao.SaleDao
 
 @Database(entities = [Purchase::class, Sale::class, Expense::class, FinStatement::class,
-    Category::class, Product::class], version = 8)
+    Category::class, Product::class], version = 9)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun purchaseDao(): PurchaseDao
     abstract fun saleDao(): SaleDao

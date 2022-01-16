@@ -88,7 +88,7 @@ class PurchasesFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
         if (p0 == binding.btnScan){
-            Toast.makeText(activity, "Fuck", Toast.LENGTH_SHORT).show()
+            //todo
         }
 
         if (p0 == binding.btnManualAdd){
